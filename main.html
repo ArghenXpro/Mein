@@ -2,86 +2,240 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Music Playlists</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="skin.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Music Playlists</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <header>
-        <h1>My Music Playlists</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#rock">Rock</a></li>
-                <li><a href="#pop">Pop</a></li>
-                <li><a href="#favorite">Favorite</a></li>
-                <li><a href="#retro">Retro</a></li>
-                <li><a href="#new">New</a></li>
-                <li><a href="#rap">Rap</a></li>
-                <!-- Добавьте ссылки на другие жанры музыки по вашему усмотрению -->
-            </ul>
-        </nav>
-    </header>
-    <div class="box">
-        <img class="search" src="search.svg" alt="">
-        <form name="search">
-            <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
-        </form>
-    </div>
-    <aside>
-        <section id="about">
-            <div>
 
-                <h2 class="me">About Me</h2> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor" class="icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                </svg>
-            </div>
-            <div class="about hidden">
-                <h1>Hello everybody!</h1>
-                <h4>My name is Arghen</h4>
-                <p>And I want to share my playlist with you.
-                    I now that most of you like to listen Music.
-                    Due to , here you can listen and download Musics for free</p>
-            </div>
-            <!-- Добавьте свою биографию и фотографию -->
-        </section>
-    </aside>
-    <audio id="audioPlayer" controls="">
-        Ваш браузер не поддерживает аудиоэлемент.
-    </audio>
-    <div class="btns">
-        <div style="position: fixed;"><button style="margin: 0 100px;" onclick="playAudio()">Play</button></div>
-        <div style="position: fixed;"><button style="margin: 0 200px;" onclick="pauseAudio()">Pause</button></div>
-        <div style="position: fixed;"><button onclick="stopAudio()">Stop</button></div>
+  <header>
+
+    <h1>My Music Playlists</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#rock">Rock</a></li>
+        <li><a href="#pop">Pop</a></li>
+        <li><a href="#favorite">Favorite</a></li>
+        <li><a href="#retro">Retro</a></li>
+        <li><a href="#new">New</a></li>
+        <li><a href="#rap">Rap</a></li>
+        <!-- Добавьте ссылки на другие жанры музыки по вашему усмотрению -->
+      </ul>
+    </nav>
+    
+  </header>
+  <div class="box">
+    <img class="search" src="search.svg" alt="">
+    <form name="search">
+      <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
+    </form>
+  </div>
+  <aside>
+    <div>
+      <h2 class="me">About Me</h2> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" class="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      </svg>
     </div>
-    <div class="main">
-        <button id="show" onclick="toggleContainer()">Show Genres</button>
-        <div id="genre-container" class="container">
-            <!-- Здесь будут отображаться жанры музыки -->
-            <p>Genre 1</p>
-            <p>Genre 2</p>
-            <!-- Добавьте другие жанры музыки по вашему усмотрению -->
+    <div class="about hidden">
+      <h1>Hello everybody!</h1>
+      <h4>My name is Arghen</h4>
+      <p>And I want to share my playlist with you.
+        I now that most of you like to listen Music.
+        Due to , here you can listen and download Musics feor free</p>
+    </div>
+  </aside>
+  <div class="up">
+    <input type="file" class="upload" />
+    <audio id="audioPlayer" controls="" id="fileInput" accept="audio/*"> </audio>
+  </div>
+  <div class="image-fader">
+    <div class="typewriter-text">
+      В мире музыки всегда находятся те, кто не только владеет своим искусством, но и оставляет непередаваемый след в сердцах слушателей. Великие музыкальные исполнители, такие как Фредди Меркьюри, Майкл Джексон, и многие другие, стали символами своего времени, их творчество продолжает вдохновлять и радовать миллионы людей по всему миру.
+      
+      Фредди Меркьюри, бессменный лидер группы Queen, не только виртуозно владел своим вокалом, но и был неповторимой сценической личностью. Его энергия, страсть и харизма на сцене оставались непревзойденными, а его голос стал легендой, которая продолжает волновать наши сердца и души.
+      
+      Майкл Джексон, король поп-музыки, воплотил в себе слияние таланта, стиля и инноваций. Его творчество переплетало в себе элементы поп-музыки, R&B, фанка и диско, придавая каждой песне неповторимую энергию и магию. Его хореография и выступления стали эталоном для многих, а его музыкальное наследие остается вечным и бессмертным.
+      
+      Эти великие музыкальные исполнители не только создавали музыку, они вкладывали в нее свои эмоции, страсти и мечты. Их творчество вдохновляет нас быть лучше, мечтать больше и верить в себя. И хотя они уже не с нами, их музыка продолжает жить и дарить нам радость, вдохновение и надежду.</div>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/The_Weeknd_Portrait_by_Brian_Ziff.jpg/267px-The_Weeknd_Portrait_by_Brian_Ziff.jpg" />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Michael_Jackson_Dangerous_World_Tour_1993.jpg/640px-Michael_Jackson_Dangerous_World_Tour_1993.jpg" />
+    <img src="https://www.orlandosentinel.com/wp-content/uploads/migration/2023/01/08/A4H32CWFYQ72GPUNCIRTS5Y7P4.jpg" />
+    <img
+      src="https://people.com/thmb/V5S2bcUy5qishDrPFJsmvqyq5bQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(687x0:689x2)/gettyimages-823663584_preview-58150fced44d40418bf7bfed4dad78f6.jpg" />
+  </div>
+  <div class="main">
+    <button id="show" onclick="toggleContainer()">Show Bands and singers</button>
+    <div id="genre-container" class="container">
+      <h4>QUEEN</h4>
+      <div class="hidden">
+        <div class="bend ">
+          <img src="https://queenonlinestore.com/cdn/shop/products/queen_20II.jpg?v=1701442982" alt="">
+          <h3>Dont stop me now</h3>
+          <audio id="audioPlayer" controls src="Queen - Don't Stop Me Now.mp3"></audio>
+          <a href="Queen - Don't Stop Me Now.mp3" download>Скачать</a>
         </div>
+        <div class="bend ">
+          <h3>Killer Queen</h3>
+          <audio id="audioPlayer" controls src="Queen - Killer Queen.mp3"></audio>
+          <a href="Queen - Killer Queen.mp3" download>Скачать</a>
+        </div>
+        <div class="bend ">
+          <h3>Bohemian Rhapsody</h3>
+          <audio id="audioPlayer" controls src="Queen - Bohemian Rhapsody.mp3"></audio>
+          <a href="Queen - Bohemian Rhapsody.mp3" download>Скачать</a>
+        </div>
+        <div class="bend ">
+          <h3>Somebody To Love</h3>
+          <audio id="audioPlayer" controls src="Queen - Somebody To Love.mp3"></audio>
+          <a href="Queen - Somebody To Love.mp3" download>Скачать</a>
+        </div>
+        <div class="bend ">
+          <h3> We Will Rock You</h3>
+          <audio id="audioPlayer" controls src="Queen - We Will Rock You.mp3"></audio>
+          <a href="Queen - We Will Rock You.mp3" download>Скачать</a>
+        </div>
+      </div>
+      <h4>MODERN TALKING</h4>
+      <div class="hidden">
+        <div class="bend ">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8h2nBLpdYmabI84MMcXazxqsW9iy03m6h6pEBNVbL9w&s"
+            alt="">
+          <h3>Brother Louie</h3>
+          <audio id="audioPlayer" controls src="Modern Talking - Brother Louie.mp3"></audio>
+          <a href="Modern Talking - Brother Louie.mp3" download>Скачать</a>
+        </div>
+        <div class="bend ">
+          <h3>Cheri Cheri Lady</h3>
+          <audio id="audioPlayer" controls src="Modern Talking - Cheri Cheri Lady.mp3"></audio>
+          <a href="Modern Talking - Cheri Cheri Lady.mp3" download>Скачать</a>
+        </div>
+        <div class="bend ">
+          <h3>You're My Heart, You're My Soul</h3>
+          <audio id="audioPlayer" controls src="Modern Talking  - You're My Heart, You're My Soul.mp3"></audio>
+          <a href="Modern Talking  - You're My Heart, You're My Soul.mp3" download>Скачать</a>
+        </div>
+      </div>
+      <h4>IMAGINE DRAGON</h4>
+      <div class="hidden">
+        <div class="bend ">
+          <img src="https://sefon.pro/img/artist_photos/imagine-dragons.jpg" alt="">
+          <h3>Believer</h3>
+          <audio id="audioPlayer" controls src="Imagine Dragons - Believer.mp3"></audio>
+          <a href="Imagine Dragons - Believer.mp3" download>Скачать</a>
+        </div>
+        <div class="bend ">
+          <h3>Bad Liar</h3>
+          <audio id="audioPlayer" controls src="Imagine Dragons - Bad Liar.mp3"></audio>
+          <a href="Imagine Dragons - Bad Liar.mp3" download>Скачать</a>
+        </div>
+        <div class="bend ">
+          <h3>Thunder</h3>
+          <audio id="audioPlayer" controls src="Imagine Dragons - Thunder.mp3"></audio>
+          <a href="Imagine Dragons - Thunder.mp3" download>Скачать</a>
+        </div>
+        <div class="bend ">
+          <h3>Demons</h3>
+          <audio id="audioPlayer" controls src="Imagine Dragons - Demons.mp3"></audio>
+          <a href="Imagine Dragons - Demons.mp3" download>Скачать</a>
+        </div>
+        <div class="bend ">
+          <h3>Radioactive</h3>
+          <audio id="audioPlayer" controls src="Imagine Dragons feat. Kendrick Lamar - Radioactive.mp3"></audio>
+          <a href="Imagine Dragons feat. Kendrick Lamar - Radioactive.mp3" download>Скачать</a>
+        </div>
+      </div>
+      <h4>ELVIS PRESLY</h4>
+      <div class="hidden">
+        <div class="bend ">
+          <img src="https://sefon.pro/img/artist_photos/elvis-presley.jpg" alt="">
+          <h3>Can't Help Falling In Love</h3>
+          <audio id="audioPlayer" controls src="Elvis Presley - Can't Help Falling In Love.mp3"></audio>
+          <a href="Elvis Presley - Can't Help Falling In Love.mp3" download>Скачать</a>
+        </div>
+        <div class="bend ">
+          <h3> Always On My Mindr</h3>
+          <audio id="audioPlayer" controls src="Elvis Presley - Always On My Mind (Rehearsal).mp3"></audio>
+          <a href="Elvis Presley - Always On My Mind (Rehearsal).mp3" download>Скачать</a>
+        </div>
+        <div class="bend ">
+          <h3>Jailhouse</h3>
+          <audio id="audioPlayer" controls src="Elvis Presley - Jailhouse Rock.mp3"></audio>
+          <a href="Elvis Presley - Jailhouse Rock.mp3" download>Скачать</a>
+        </div>
+        <div class="bend ">
+          <h3>Love Me Tender</h3>
+          <audio id="audioPlayer" controls src="Elvis Presley - Love Me Tender.mp3"></audio>
+          <a href="Elvis Presley - Love Me Tender.mp3" download>Скачать</a>
+        </div>
+      </div>
+      <h4>TWENTY ONE PILOTS</h4>
+      <audio class="hidden" controls src=""></audio>
     </div>
+  </div>
 
+  <div class="footer">
+    <div class="heading">
+      <h2>Arghen<sup>™</sup></h2>
+    </div>
+    <div class="content">
+      <div class="services">
+        <h4>Services</h4>
+        <p><a href="#">App development</a></p>
+        <p><a href="#">Web development</a></p>
+        <p><a href="#">DevOps</a></p>
+        <p><a href="#">Web designing</a></p>
+      </div>
+      <div class="social-media">
+        <h4>Social</h4>
+        <p>
+          <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+        </p>
+        <p>
+          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        </p>
+        <p>
+          <a href="https://github.com/farazc60"><i class="fab fa-github"></i> Github</a>
+        </p>
+        <p>
+          <a href="https://www.facebook.com/codewithfaraz"><i class="fab fa-facebook"></i> Facebook</a>
+        </p>
+        <p>
+          <a href="https://www.instagram.com/codewithfaraz"><i class="fab fa-instagram"></i> Instagram</a>
+        </p>
+      </div>
+      <div class="links">
+        <h4>Quick links</h4>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Blogs</a></p>
+        <p><a href="#">Contact</a></p>
+      </div>
+      <div class="details">
+        <h4 class="address">Address</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur <br />
+          adipisicing elit. Cupiditate, qui!
+        </p>
+        <h4 class="mobile">Mobile</h4>
+        <p><a href="#">+996707507696</a></p>
+        <h4 class="mail">Email</h4>
+        <p><a href="#">argenjoldubaew84@gmail.com</a></p>
+      </div>
+    </div>
     <footer>
-        <p>Contact us: 123-456-789</p>
-        <ul class="social-links">
-            <li><a href="https://www.facebook.com/">Facebook</a></li>
-            <li><a href="https://twitter.com/">Twitter</a></li>
-            <li><a href="https://www.instagram.com/">Instagram</a></li>
-            <!-- Добавьте другие ссылки на социальные сети, если необходимо -->
-        </ul>
+      <hr />
+      © 2024 made by Arghen Zhildubaev.
     </footer>
-
-    <script src="main.js">
-    </script>
+  </div>
+  <script src="main.js">
+  </script>
 </body>
 
 </html>
